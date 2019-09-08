@@ -1,0 +1,70 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# User specific aliases and functions
+PS1="[\u@\h \[\e[0;32m\]\W\[\e[m\]]\\$ "
+#PS4='+ [${BASH_SOURCE##*/}:${LINENO}] ${FUNCNAME:+$FUNCNAME()}: '
+#=====================#
+# main for WRF setting
+ulimit -s unlimited
+#=====================#
+
+#alias less='less -N'
+#=============================================================#
+alias ssh_sky='ssh -i ${HOME}/connection/sky/id_rsa'
+alias scp_sky='scp -i ${HOME}/connection/sky/id_rsa'
+alias rsync_sky='rsync -e "ssh -i ${HOME}/connection/sky/id_rsa" -rlptov'
+alias ssh_meteor='ssh -i ${HOME}/connection/meteor/id_rsa_meteor'
+alias scp_meteor='scp -i ${HOME}/connection/meteor/id_rsa_meteor'
+alias rsync_meteor='rsync -e "ssh -i ${HOME}/connection/meteor/id_rsa_meteor" -rlptov'
+alias ssh_raijin='ssh -i ${HOME}/connection/raijin/id_rsa'
+alias scp_raijin='scp -i ${HOME}/connection/raijin/id_rsa'
+alias rsync_raijin='rsync -e "ssh -i ${HOME}/connection/raijin/id_rsa" -rlptov'
+#=============================================================#
+alias RIP4='cd ${HOME}/local/RIP4'
+#=============================================================#
+alias drobo='cd /mnt/drobo/inokuchi'
+alias ddom='cd /mnt/drobo/inokuchi/WRFV3.9.1.1/domain'
+alias dwork='cd /mnt/drobo/inokuchi/WRFV3.9.1.1/work'
+alias dctl='cd /mnt/drobo/inokuchi/WRFV3.9.1.1/arwonly'
+alias tool='cd ${HOME}/Tools'
+alias gtool='cd ${HOME}/Tools/grads'
+alias mkgs='cd ${HOME}/Tools/grads/gsfile_creater'
+alias riptool='cd ${HOME}/Tools/DRAWRIP'
+
+alias gradsd='echo -n "Project Name:"; read grads_pj; cd $HOME/WRFV3.9.1.1/domain/${grads_pj}'
+alias gradsw='echo -n "Project Name:"; read grads_pj; cd $HOME/WRFV3.9.1.1/work/${grads_pj}'
+#=============================================================#
+
+alias gf='cd /mnt/drobo/inokuchi/WRFV3.9.1.1/work/CTLrun/grads'
+alias CTL='cd /mnt/drobo/inokuchi/WRFV3.9.1.1/work/CTLrun/grads'
+alias rip='cd ${HOME}/WRFV3.9.1.1/RIP4/CTLrun'
+
+#=================================================================#
+alias ctl='cd ${HOME}/WRFV3.9.1.1/controlcenter/FNLandMANAL'
+alias wrf='cd ${HOME}/WRFV3.9.1.1'
+alias dom='cd ${HOME}/WRFV3.9.1.1/domain'
+alias work='cd ${HOME}/WRFV3.9.1.1/work'
+alias arw='cd ${HOME}/WRFV3.9.1.1/ARWpost'
+#-----------------------------------------------------------------
+alias octl='cd ${HOME}/WRF/controlcenter/FNLandMANAL'
+alias owrf='cd ${HOME}/WRF'
+alias odom='cd ${HOME}/WRF/domain'
+alias owork='cd ${HOME}/WRF/work'
+alias oarw='cd ${HOME}/WRF/ARWpost'
+#=================================================================#
+alias ln_lc='ln -s ${HOME}/Tools/grads/coloring/loop_color.gs ${PWD}/'
+alias rotate90='csh ~/Tools/else/rotate90_jpg.sh'
+alias rotate90p='csh ~/Tools/else/rotate90_png.sh'
+
+alias jpg='csh ${HOME}/Tools/else/change_ps_jpg.sh'
+alias png='csh ${HOME}/Tools/else/change_eps_png.job'
+#=================================================================#
+alias dawork='cd /mnt/drobo/inokuchi/WRFV3.9.1.1_noevapo/work'
+#=================================================================#
+alias gstemp='cp ${HOME}/Tools/grads/gstemplate/template.gs ${PWD}/'
+
